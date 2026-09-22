@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace BookClubApp.Entity.Entities
 {
-    public class Category :BaseEntity//
+    public class Category :BaseEntity
     {
+        public string Name { get; set; } = string.Empty;
+        public ICollection<Book> Books { get; set; } = new HashSet<Book>(); //bir kategori birden fazla kitaba ait olabilir, bu yüzden ICollection kullanıyoruz.
     }
 }
